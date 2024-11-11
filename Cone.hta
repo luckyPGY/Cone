@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cone</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Assets/cone.png" type="image/png">
+    <script src="scriptsearch.js">
+    </script>
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="editor.html"><div id="File" class="navspan"><h3>File</h3></div></a></li>
+            <li><a href="#"></a><div class="navspan"><h3>Edit</h3></div></a></li>
+            <li><a href="settings.html"><div class="navspan"><h3>Settings</h3></div></li></ul></a></li>
+        </ul>
+    </nav>
+    <div id="title">
+        <h1 id="titletxt">Cone</h1>
+        <form onsubmit="event.preventDefault(); loadIframe();">
+            <input type="search" placeholder="Search here" id="inputsearch">
+            <button id="submitter" onclick="loadIframe">🔍</button>
+        </form>
+    </div>
+    <iframe id="iframe" style="width: 480px; height: 360px;"></iframe>
+    <div id="visitedy">
+        <h2 id="sugh2">Suggestions</h2><br><br>
+            <button id="btn1" type="button" onclick="search1()" name="https://example.com">Search anything</button>
+            <button id="btn2" type="button" onclick="search2()" name="https://example.com">Search anything</button>
+            <button id="btn3" type="button" onclick="search3()" name="https://example.com">Search anything</button>
+            <button id="btn4" type="button" onclick="search4()" name="https://example.com">Search anything</button>
+    </div>
+</body>
+</html>
