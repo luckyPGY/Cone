@@ -5,12 +5,12 @@ function loadIframe() {
     const url = document.getElementById('inputsearch').value;
     console.log(url);
     const iframe = document.getElementById('iframe');
-    if (url === 'game:tictactoe'){
-        iframe.src = 'file:///C:/Users/Marcelo/Documents/Internetadin/Htmls/TICTACMEGA/INDEX.htm';
-    }
         iframe.src = url;
         visits.push(url);
         console.log(visits);
+        if (url == 'game:target'){
+            iframe.src = 'file:///C:/Users/Marcelo/Documents/Internetadin/Htmls/Browser/stf12/target.html';
+        }
       document.getElementById('btn1').textContent = visits[visits.length - 1];
       document.getElementById('btn2').textContent = visits[visits.length - 2];
       document.getElementById('btn3').textContent = visits[visits.length - 3];

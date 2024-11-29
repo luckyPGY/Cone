@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find The Target: 1</title>
+    <style>
+        #target{
+            background-color: crimson;
+            border-radius: 200%;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #txt{
+            font-size: 24px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body{
+            background: white;
+        }
+    </style>
+</head>
+<body id="doc">
+    <div id="target"><h2 id="txt">0</h2></div>
+    <script>
+        var target = document.getElementById('target');
+        let rounds = 1;
+        let timer = 0;
+
+        target.onmouseover = function(){
+            target.style.position = 'absolute';
+            target.style.top = `${Math.random() * 100}%`;
+            target.style.bottom = `${Math.random() * 100}%`;
+            target.style.left = `${Math.random() * 100}%`;
+            target.style.right = `${Math.random() * 100}%`;
+            target.style.backgroundColor = `rgb(${Math.random() * 200}, ${Math.random() * 200}, ${Math.random() * 200})`;
+            rounds = rounds += 1;
+            document.title = `Find The Target: ${rounds}`;
+            document.getElementById('txt').textContent = rounds;
+            timer = 0;
+        }
+    </script>
+</body>
+</html>
