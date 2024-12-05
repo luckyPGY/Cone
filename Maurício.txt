@@ -2,11 +2,11 @@ pcl(){
    Square{
        type: "element, square";
        color: "purple";
-       Text{
-            type: "text";
-            content: "Hello world!";
-      }
       pcl.start{
-          render(square, square.childs(all));
+          render(square);
       }
+   function clicked(){
+     square.color = "blue";
+   }
+   square.clicked('clicked()');
 }
